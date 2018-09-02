@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        <h4>Transportation Details via {{ transportMode }}</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div *ngIf="showNoDataFound">
+                No Data found.
+            </div>
+            <div [hidden]="showNoDataFound" class="col-sm-8 mt-5">
+                <table class="table table-striped mt-5">
+                    <thead class="thead-inverse">
+                        <td style="font-weight: 700">Entity</td>
+                        <td style="font-weight: 700">Value</td>
+                    </thead>
+                    <tr *ngFor="let obj of carTransportModeObjectArray">
+                        <td> {{obj.key}} </td>
+                        <td *ngIf="obj.key === 'duration'"> {{ parseF(obj.frequency).toFixed(2)}} minutes (approx.)</td>
+                        <td *ngIf="obj.key !== 'duration'"> {{obj.frequency}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-4">
+                <svg id="donutSvg" width="400" height="400"></svg>
+            </div>
+        </div>
+    </div>
+</div>

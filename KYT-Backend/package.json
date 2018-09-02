@@ -4,11 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --inspect",
+    "sync": "node src/scripts/sync.js",
+    "fetchJSON": "node src/scripts/fetchJSON.js",
+    "exposeJSON": "node src/scripts/saveJsonToDB.js"
   },
   "author": "Kumar Ratnam Pandey",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "pg": "^6.1.0",
+    "sequelize": "^4.38.0",
+    "sequelize-fixtures": "^0.7.0"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0"
   }
 }

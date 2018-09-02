@@ -1,0 +1,12 @@
+<div *ngIf="showNoDataFound">
+    No Data Found
+</div>
+<div style="text-align: center">
+    <button class="btn-primary" *ngIf="currentYAxis === 'duration'" (click)="switchModes('count')">
+        w.r.t Count
+    </button>
+    <button class="btn-primary" *ngIf="currentYAxis === 'count'" (click)="switchModes('duration')">
+        w.r.t Duration
+    </button>
+</div>
+<svg [hidden]="showNoDataFound" id="barSvg" width="950" height="451"></svg>

@@ -1,0 +1,24 @@
+.bar {
+  fill: #a05d56;
+}
+
+.bar:active {
+  fill: brown;
+}
+
+.axis-title {
+  fill: none;
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.bar-toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6f257f;
+  padding: 14px;
+  text-align: center;
+}

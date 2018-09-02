@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-header" style="height:83px">
+        <h4>Transport Mode-: {{ transportMode }}</h4>
+    </div>
+    <div class="card-body">
+        <div *ngIf="showNoDataFound">
+            No Data Found
+        </div>
+        <svg id="pieSvg" width="800" height="480"></svg>
+    </div>
+</div>
